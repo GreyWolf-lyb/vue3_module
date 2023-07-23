@@ -1,85 +1,68 @@
 <template>
-    <table></table>
+    <my-table
+    :tableData="tableData"
+    :tableHeader="tableHeader"
+    :tableOperate="tableOperate"
+    :tableConfig="tableConfig"
+    @handleSelectionChange="handleSelectionChange"
+    >
+    </my-table>
 </template>
 <script lang="ts" setup>
-import table from "@/components/table/index.vue"
+import myTable from "@/components/table/index.vue"
+import { Edit } from '@element-plus/icons-vue'
+import  tableConfig from '@/components/table/index';
 
-const tableData = {
-    header: [
+const tableHeader = [
+    {
+        label: '时间',
+        prop: 'time',
+        width: '180',
+    },
+    {
+        label: '姓名',
+        prop: 'name',
+        width: '180',
+    },
+    {
+        label: '性别',
+        prop: 'sex',
+        width: '',
+    }
+]
+
+
+    
+const tableData = [
+    {
+        time: "2023/07/18",
+        name: "张三1",
+        sex: "男",
+    },
+    {
+        time: "2023/07/18",
+        name: "张三2",
+        sex: "女",
+    },
+]
+const tableOperate = {
+    label: '操作',
+    width:"",
+    event: [
         {
-            label: '一级表头',
-            prop: 'name1',
-        },
-        {
-            label: '一级表头',
-            children: [
-                {
-                    label: '二级表头',
-                    prop: 'name2',
-                },
-                {
-                    label: '二级表头',
-                    prop: 'name3',
-                },
-                {
-                    label: '二级表头',
-                    children: [
-                        {
-                            label: '三级表头',
-                            prop: 'name4',
-                        },
-                        {
-                            label: '三级表头',
-                            prop: 'name5',
-                        },
-                        {
-                            label: '三级表头',
-                            prop: 'name6',
-                        },
-                    ]
-                }
-            ]
-        }
-    ],
-    data: [
-        {
-            name1: "name1",
-            name2: "name2",
-            name3: "name3",
-            name4: "name4",
-            name5: "name5",
-            name6: "name6",
+            link:"link",
+            type: "primary",
+            size:"small",
+            label: "编辑",
+            click: (row:any) => {
+                console.log(row)
+            }
         }
     ]
 }
-// const tableData = {
-//     header: [
-//         {
-//             label: '时间',
-//             prop: 'time',
-//             width: '100'
-//         },
-//         {
-//             label: '姓名',
-//             prop: 'name',
-//             width: '100'
-//         },
-//         {
-//             label: '性别',
-//             prop: 'sex',
-//             width: '100'
-//         }
-//     ],
-//     data: [
-//         {
-//             time: "2023/07/18",
-//             name: "张三",
-//             sex:"男",
-//         },
-//     ],
-//     operate: {
-//         label: '操作',
-//         event:[]
-//     }
-// }
+
+// 选中项
+const handleSelectionChange = (row: any) => {
+    console.log(row)
+}
 </script>

@@ -16,5 +16,7 @@ declare global {
   const ElPagination: typeof import('element-plus/es')['ElPagination']
   const ElRow: typeof import('element-plus/es')['ElRow']
   const ElSubMenu: typeof import('element-plus/es')['ElSubMenu']
+  const ElTable: typeof import('element-plus/es')['ElTable']
+  const ElTableColumn: typeof import('element-plus/es')['ElTableColumn']
 }
 export {}

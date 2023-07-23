@@ -22,6 +22,8 @@ declare module '@vue/runtime-core' {
     ElPagination: typeof import('element-plus/es')['ElPagination']
     ElRow: typeof import('element-plus/es')['ElRow']
     ElSubMenu: typeof import('element-plus/es')['ElSubMenu']
+    ElTable: typeof import('element-plus/es')['ElTable']
+    ElTableColumn: typeof import('element-plus/es')['ElTableColumn']
     Menu: typeof import('./src/components/menu.vue')['default']
     Pagination: typeof import('./src/components/pagination.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
