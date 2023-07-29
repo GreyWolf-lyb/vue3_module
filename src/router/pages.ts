@@ -51,13 +51,13 @@ const pages = [
         ]
     },
     {
-        name: 'tree',
-        path: '/tree',
+        name: 'tabs',
+        path: '/tabs',
         menu: {
-            title: "树结构",  
+            title: "tab切换",  
             icon: Setting,
         },
-        component: () => import('@/pages/tree/index.vue')
+        component: () => import('@/pages/tabs/index.vue')
     },
 ]
 
