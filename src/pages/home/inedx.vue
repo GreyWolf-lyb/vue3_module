@@ -19,7 +19,7 @@ const pages = [
         path: '/layout',
         menu: {
             title: "首页",
-            icon: Location,
+            // icon: Location,
             disabled:true
         },
         children: [

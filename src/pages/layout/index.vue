@@ -38,7 +38,7 @@
 import { ref } from 'vue'
 import { Expand, Fold, SwitchButton } from '@element-plus/icons-vue';
 
-import Menu from "@/components/menu.vue";
+import Menu from "@/components/menu/index.vue";
 
 import breadcrumb from "@/components/breadcrumb.vue";
 
